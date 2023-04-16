@@ -432,7 +432,6 @@ function App() {
         return response.blob();
       })
       .then(blob => {
-  
         const key = "-----BEGIN PRIVATE KEY-----" + privateKey + "-----END PRIVATE KEY-----";
         var encryptor = new JSEncrypt()
         encryptor.setPrivateKey(key)
@@ -447,9 +446,6 @@ function App() {
         a.click();
         a.remove();
         window.URL.revokeObjectURL(url);
-
-        
-
       })
   };
 
