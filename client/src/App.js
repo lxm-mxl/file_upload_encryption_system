@@ -107,7 +107,7 @@ function App() {
         const fileReader = new FileReader();
         fileReader.onload = function (event) {
           const fileData = event.target.result.split(',')[1];
-          console.log("original: " + fileData, toString())
+          console.log("original: " + fileData.toString())
           const encryptedData = CryptoJS.AES.encrypt(fileData, secretKey, {
             mode: CryptoJS.mode.ECB,
             padding: CryptoJS.pad.Pkcs7
